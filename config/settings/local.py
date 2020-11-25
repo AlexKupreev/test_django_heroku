@@ -11,7 +11,7 @@ SECRET_KEY = env(
     default="zHLKo6Ib5o8Ghs4foqvX7zwBgWJsDw5MvXXPk6yQ5bi2S5RxTlMAssWW5IxTQ70Y",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "test-django-heroku.local"]
 
 # CACHES
 # ------------------------------------------------------------------------------

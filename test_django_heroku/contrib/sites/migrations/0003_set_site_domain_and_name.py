@@ -13,7 +13,7 @@ def update_site_forward(apps, schema_editor):
     Site.objects.update_or_create(
         id=settings.SITE_ID,
         defaults={
-            "domain": "test_django_heroku.local",
+            "domain": "test-django-heroku.local",
             "name": "Test Django on Heroku",
         },
     )
