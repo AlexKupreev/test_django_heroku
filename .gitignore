@@ -329,3 +329,6 @@ test_django_heroku/media/
 .env
 .envs/*
 !.envs/.local/
+
+# certificates for local running
+certs/
