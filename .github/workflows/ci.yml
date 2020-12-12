@@ -4,6 +4,8 @@ name: CI
 env:
   DOCKER_BUILDKIT: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
+  # create a top-level GitHub action env key that will be accessible to every GitHub action step and job
+  DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:${POSTGRES_PORT}/${POSTGRES_DB}
 
 on:
   pull_request:
@@ -53,7 +55,7 @@ jobs:
         run:  docker-compose -f local.yml up -d
 
       - name: Run Django Tests
-        run:  docker-compose -f local.yml exec -T django pytest
+        run:  docker-compose -f local.yml exec -e DATABASE_URL=${DATABASE_URL} -T django pytest
 
       - name: Tear down the Stack
         run:  docker-compose down
