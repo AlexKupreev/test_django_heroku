@@ -5,7 +5,7 @@ env:
   DOCKER_BUILDKIT: 1
   COMPOSE_DOCKER_CLI_BUILD: 1
   # create a top-level GitHub action env key that will be accessible to every GitHub action step and job
-  DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}"
+  DATABASE_URL: postgres://YmTDGIQkasHozdqDHenyPncbBlWraWFv:QnQlSHgy1JxziKzmFzxaNlmw6CrbmYgc5LUFv4aDO1SpLAiB6xRjg7Ro5QBYs3RT@postgres:5432/test_django_heroku
 
 on:
   pull_request:
