@@ -5,3 +5,5 @@ IPYTHONDIR=/app/.ipython
 
 # HTTPS
 # ------------------------------------------------------------------------------
+VIRTUAL_HOST=test-django-heroku.local
+VIRTUAL_PORT=8000
